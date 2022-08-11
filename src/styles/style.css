@@ -1,1 +1,8 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  font-family: "Montserrat", sans-serif;
+  color: #2f073e;
+}
+
+body {
+  background-color: #fffad2;
+}/*# sourceMappingURL=style.css.map */
