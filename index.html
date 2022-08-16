@@ -15,26 +15,45 @@
     <title>Kato Beauty</title>
   </head>
   <body>
-    <header>
-      <div>
-        <a href="#">
+    <header class="primary-header">
+      <div class="container header-container">
+        <a href="#" class="logo-link">
           <img src="src/images/icons/Group 8.svg" alt="Kato Beauty Icon" />
           <h1>Kato Beauty</h1>
         </a>
+        <div class="mobile-nav-toggle-container">
+          <button
+            class="mobile-nav-toggle"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+          >
+            <span class="nav-span-1"></span>
+            <span class="nav-span-2"></span>
+            <span class="nav-span-3"></span>
+          </button>
+        </div>
+
         <nav>
-          <ul role="list">
-            <li><a href="#">About Me</a></li>
+          <ul
+            role="list"
+            id="primary-navigation"
+            class="primary-navigation flex"
+            data-visible="false"
+          >
+            <li class="active"><a href="#">About Me</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Testimonials</a></li>
             <li><a href="#">Contact</a></li>
-            <button>Start Booking</button>
+            <div class="button-box">
+              <button class="button">Start Booking</button>
+            </div>
           </ul>
         </nav>
       </div>
     </header>
     <main>
-      <section>
-        <div>
+      <section class="container showcase-container">
+        <div class="showcase-message-container">
           <div>
             <h4>We Help You</h4>
           </div>
@@ -48,12 +67,22 @@
             <button>Explore</button>
           </div>
         </div>
-        <div>
+
+        <div class="showcase-image-container">
+          <div>
+            <img
+              src="src/images/photos/ospan-ali-x46b8f9AHaY-unsplash.jpg"
+              alt="showcase photo"
+            />
+          </div>
+        </div>
+
+        <div class="showcase-contact-container">
           <div>
             <img src="src/images//icons/location.svg" alt="location" />
             <p>8842 West Virtue Ave, Los Angelos California</p>
           </div>
-          <div>
+          <div class="showcase-span-container">
             <span>
               <img src="src/images/icons/phone.svg" alt="phone number" />
               <p>1 (802) 390 - 1290</p>
@@ -64,16 +93,8 @@
             </span>
           </div>
         </div>
-        <div>
-          <div>
-            <img
-              src="src/images/photos/ospan-ali-x46b8f9AHaY-unsplash.jpg"
-              alt="showcase photo"
-            />
-          </div>
-        </div>
       </section>
-      <section>
+      <section class="container">
         <div>
           <img
             src="src/images/photos/filipp-romanovski-CGKYNN3uuVo-unsplash.jpg"
@@ -101,7 +122,7 @@
           </p>
         </div>
       </section>
-      <section>
+      <section class="container">
         <h4>Services</h4>
         <div>
           <div>
@@ -161,7 +182,7 @@
         </div>
         <button>Start Booking</button>
       </section>
-      <section>
+      <section class="container">
         <h4>What My Customers Love about My Services</h4>
         <div>
           <div>
@@ -196,7 +217,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section class="container">
         <h4>Contact</h4>
         <div>
           <div>
@@ -217,34 +238,36 @@
                 <img src="src/images//icons/location.svg" alt="location" />
                 <p>8842 West Virtue Ave, Los Angelos California</p>
               </div>
-              <iframe
+              <!-- <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9442.236202803306!2d140.3219930713433!3d38.260479322556385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8bb623d7579f35%3A0xb364c836e59148da!2sSukiya!5e0!3m2!1sen!2sus!4v1660615107357!5m2!1sen!2sus"
-                width="400"
+                width="250"
                 height="300"
                 style="border: 0"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
+              ></iframe> -->
             </div>
           </div>
         </div>
       </section>
     </main>
     <footer>
-      <div>
-        <p>
-          This app was made by Mitchell William Spaur for demonstration
-          purposes.
-        </p>
-      </div>
-      <div>
-        <ul role="list">
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
+      <div class="container">
+        <div>
+          <p>
+            This app was made by Mitchell William Spaur for demonstration
+            purposes.
+          </p>
+        </div>
+        <div>
+          <ul role="list">
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </footer>
     <script type="module" src="/src/main.ts"></script>
