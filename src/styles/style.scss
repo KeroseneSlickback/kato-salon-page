@@ -1,5 +1,5 @@
 $purple1: #2f073e;
-$pruple2: #681d94;
+$purple2: #681d94;
 $purple3: #a26bb8;
 $purple4: #dcb8db;
 $yellow1: #ffd300;
@@ -44,7 +44,7 @@ body {
 
   &:hover {
     background-color: $yellow2;
-    color: $pruple2;
+    color: $purple2;
   }
   &:active {
     transform: translate(0px, 0px);
@@ -120,83 +120,80 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
-  width: 40px;
+  height: 36px;
+  width: 36px;
   background-color: inherit;
-  border: 2px solid $yellow1;
+  border: 2px solid $purple2;
   transform: translate(2px, 2px);
 }
 
 .mobile-nav-toggle {
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
-  background-color: $yellow1;
+  background-color: $purple2;
   border: none;
   transition: 0.08s;
   transform: translate(-4px, -4px);
 
   &:hover {
-    background-color: $yellow2;
-    color: $pruple2;
+    background-color: $purple3;
+    color: $purple2;
   }
   &:active {
     transform: translate(0px, 0px);
   }
 }
 
-.nav-span-1,
-.nav-span-2,
-.nav-span-3 {
+.span-1,
+.span-2,
+.span-3 {
   margin: 0;
   padding: 0;
   border: none;
   display: block;
-  background: $purple1;
+  background: $yellow3;
+  border-radius: 2px;
   width: 26px;
-  height: 4px;
+  height: 3px;
   z-index: 1000;
   transition: all 0.2s ease-in-out;
 }
 
-.nav-span-1 {
+.span-1 {
+  transform: translateY(-4px);
+}
+
+.span-2 {
+  transform: translateY(0px);
+}
+
+.span-3 {
   transform: translateY(4px);
 }
 
-.nav-span-2 {
-  transform: translateY(-8px);
+.span-1[data-visible="true"] {
+  transform: rotate(45deg) translate(1px, 1px);
+  width: 30px;
 }
 
-.nav-span-3 {
-  transform: translateY(4px);
+.span-2[data-visible="true"] {
+  display: none;
+}
+
+.span-3[data-visible="true"] {
+  transform: rotate(-45deg) translate(1px, -1px);
+  width: 30px;
 }
 
 @media (min-width: 50em) {
   .mobile-nav-toggle {
     display: none;
   }
-}
-
-@media (max-width: 50em) {
-  // .primary-navigation {
-  //   position: fixed;
-  //   z-index: 1000;
-  //   inset: 0 0 0 50%;
-  //   background: $yellow2;
-  //   // background: hsl(0 0% 100% / 0.1);
-  //   // backdrop-filter: blur(0.5rem);
-  //   flex-direction: column;
-  //   padding: min(30vh, 10rem) 2rem;
-
-  //   transform: translateX(100%);
-  //   li,
-  //   div {
-  //     margin: 10px 0;
-  //   }
-  // }
 }
 
 .showcase-container {

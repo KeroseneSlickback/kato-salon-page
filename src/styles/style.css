@@ -101,57 +101,73 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
-  width: 40px;
+  height: 36px;
+  width: 36px;
   background-color: inherit;
-  border: 2px solid #ffd300;
+  border: 2px solid #681d94;
   transform: translate(2px, 2px);
 }
 
 .mobile-nav-toggle {
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
-  background-color: #ffd300;
+  background-color: #681d94;
   border: none;
   transition: 0.08s;
   transform: translate(-4px, -4px);
 }
 .mobile-nav-toggle:hover {
-  background-color: #fee977;
+  background-color: #a26bb8;
   color: #681d94;
 }
 .mobile-nav-toggle:active {
   transform: translate(0px, 0px);
 }
 
-.nav-span-1,
-.nav-span-2,
-.nav-span-3 {
+.span-1,
+.span-2,
+.span-3 {
   margin: 0;
   padding: 0;
   border: none;
   display: block;
-  background: #2f073e;
+  background: #fffad2;
+  border-radius: 2px;
   width: 26px;
-  height: 4px;
+  height: 3px;
   z-index: 1000;
   transition: all 0.2s ease-in-out;
 }
 
-.nav-span-1 {
+.span-1 {
+  transform: translateY(-4px);
+}
+
+.span-2 {
+  transform: translateY(0px);
+}
+
+.span-3 {
   transform: translateY(4px);
 }
 
-.nav-span-2 {
-  transform: translateY(-8px);
+.span-1[data-visible=true] {
+  transform: rotate(45deg) translate(1px, 1px);
+  width: 30px;
 }
 
-.nav-span-3 {
-  transform: translateY(4px);
+.span-2[data-visible=true] {
+  display: none;
+}
+
+.span-3[data-visible=true] {
+  transform: rotate(-45deg) translate(1px, -1px);
+  width: 30px;
 }
 
 @media (min-width: 50em) {
