@@ -18,7 +18,7 @@
     <header class="primary-header">
       <div class="container header-container">
         <a href="#" class="logo-link">
-          <img src="src/images/icons/Group 8.svg" alt="Kato Beauty Icon" />
+          <!-- <img src="src/images/icons/Group 8.svg" alt="Kato Beauty Icon" /> -->
           <h1>Kato Beauty</h1>
         </a>
         <div class="mobile-nav-toggle-container">
@@ -32,22 +32,24 @@
             <span class="nav-span span-3" data-visible="false"></span>
           </button>
         </div>
-
         <nav>
           <ul
             role="list"
             id="primary-navigation"
-            class="primary-navigation flex"
+            class="primary-navigation"
             data-visible="false"
           >
             <li class="active"><a href="#">About Me</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Testimonials</a></li>
             <li><a href="#">Contact</a></li>
-            <div class="button-box">
-              <button class="button">Start Booking</button>
+            <div class="button-box nav-book-button-container">
+              <button class="button nav-book-button" data-visible="false">
+                Start Booking
+              </button>
             </div>
           </ul>
+          <div class="mobile-backdrop" data-visible="false" />
         </nav>
       </div>
     </header>
