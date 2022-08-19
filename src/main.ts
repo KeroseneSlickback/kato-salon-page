@@ -22,16 +22,74 @@ const mobileNavSlide = () => {
     navSpanLines.forEach((span) => {
       span.setAttribute("data-visible", "false");
     });
-    mobileBackdrop?.setAttribute("data-visible", "false");
-    const colorChangeTimeout = setTimeout(() => {
+    setTimeout(() => {
+      mobileBackdrop?.setAttribute("data-visible", "false");
+    }, 100);
+    setTimeout(() => {
       navBookButtonContainer?.setAttribute("data-visible", "false");
       navBookButton?.setAttribute("data-visible", "false");
     }, 200);
-    clearTimeout(colorChangeTimeout);
   }
 };
 
 navToggle?.addEventListener("click", mobileNavSlide);
 mobileBackdrop?.addEventListener("click", mobileNavSlide);
+
+const aboutMeImgs = document.querySelectorAll(".about-me-image");
+
+let carouselIndex = 0;
+const carouselTimer = 5000;
+
+const incrementIndex = () => {
+  if (carouselIndex === aboutMeImgs.length - 1) {
+    carouselIndex = 0;
+  } else {
+    carouselIndex += 1;
+  }
+};
+
+const determineIndex = async (index: number) => {
+  let newIndex = index + 1;
+  if (newIndex > aboutMeImgs.length - 1) {
+    return 0;
+  } else {
+    return newIndex;
+  }
+};
+
+const centerCycle = (element: Element) => {
+  element.classList.remove("carousel-bottom-right");
+  element.classList.remove("carousel-top-left");
+  element.classList.remove("carousel-center");
+  element.classList.add("carousel-center");
+};
+
+const topLeftCycle = (element: Element) => {
+  element.classList.remove("carousel-center");
+  element.classList.remove("carousel-bottom-right");
+  element.classList.remove("carousel-top-left");
+  element.classList.add("carousel-top-left");
+};
+
+const bottomRightCycle = (element: Element) => {
+  element.classList.remove("carousel-center");
+  element.classList.remove("carousel-bottom-right");
+  element.classList.remove("carousel-top-left");
+  element.classList.add("carousel-bottom-right");
+};
+
+const runCarousel = async () => {
+  let topLeftIndex = await determineIndex(carouselIndex);
+  let bottomRightIndex = await determineIndex(topLeftIndex);
+  setTimeout(() => {
+    centerCycle(aboutMeImgs[carouselIndex]);
+    topLeftCycle(aboutMeImgs[topLeftIndex]);
+    bottomRightCycle(aboutMeImgs[bottomRightIndex]);
+    incrementIndex();
+    runCarousel();
+  }, carouselTimer);
+};
+
+runCarousel();
 
 export {};
