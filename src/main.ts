@@ -38,7 +38,7 @@ mobileBackdrop?.addEventListener("click", mobileNavSlide);
 const aboutMeImgs = document.querySelectorAll(".about-me-image");
 
 let carouselIndex = 0;
-const carouselTimer = 5000;
+const carouselTimer = 4000;
 
 const incrementIndex = () => {
   if (carouselIndex === aboutMeImgs.length - 1) {

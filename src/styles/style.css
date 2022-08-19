@@ -29,7 +29,7 @@ body {
 .button {
   background-color: #ffd300;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 6px 12px;
   transition: 0.08s;
   transform: translate(-4px, -4px);
@@ -405,4 +405,14 @@ body {
   z-index: 10;
   transform: translate(0px, 0px);
   filter: brightness(100%);
+}
+
+.about-me-text-container h5 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+.about-me-text-container p {
+  font-size: 0.9rem;
+  text-indent: 2rem;
 }/*# sourceMappingURL=style.css.map */
