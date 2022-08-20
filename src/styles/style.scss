@@ -19,6 +19,13 @@ body {
   overflow-x: hidden;
 }
 
+.section-header {
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1;
+  margin: 1rem 0;
+}
+
 .container {
   $padding: 1rem;
   $max-width: 1110px;
@@ -340,7 +347,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin: 1.25rem 0;
+  margin: 1.25rem 0 0 0;
 
   div {
     display: flex;
@@ -368,12 +375,6 @@ body {
 }
 
 .about-me-container {
-  h4 {
-    font-size: 1.5rem;
-    text-align: center;
-    line-height: 1;
-    margin-bottom: 1rem;
-  }
 }
 
 .about-me-carousel-container {
@@ -431,5 +432,100 @@ body {
   p {
     font-size: 0.9rem;
     text-indent: 2rem;
+  }
+}
+
+.services-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-block-container {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.service-block {
+  background-color: $purple3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform: translate(8px, 8px);
+  height: 350px;
+  aspect-ratio: 2/3;
+  h4 {
+    position: absolute;
+    bottom: 15px;
+    color: $yellow3;
+    font-size: 1.1rem;
+    line-height: 0;
+  }
+}
+
+.service-block::after {
+  content: " ";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  transform: translate(8px, 8px);
+  width: 100%;
+  height: 100%;
+  border: 4px solid $purple3;
+}
+
+.picture-overlay-div {
+  position: relative;
+  z-index: 1;
+  transform: translate(-16px, -32px);
+  img {
+    height: 350px;
+    aspect-ratio: 2/3;
+    z-index: 2;
+  }
+  div {
+    padding: 1rem;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: flex;
+    opacity: 1;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: all 0.2s ease-in;
+    background: hsl(0 0% 1% / 0.4);
+    height: 350px;
+    p {
+      text-indent: 1rem;
+      color: $white;
+      font-size: 0.8rem;
+    }
+    h5 {
+      color: $white;
+      font-size: 1.05rem;
+      line-height: 1;
+      margin: 0.5rem 0 0 0;
+    }
+  }
+}
+
+.picture-overlay-div:hover {
+  div {
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .picture-overlay-div {
+    div {
+      opacity: 0;
+    }
   }
 }
