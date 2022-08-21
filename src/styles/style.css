@@ -524,8 +524,9 @@ body {
   scrollbar-width: none;
   scrollbar-color: transparent transparent;
   max-width: 100vw;
-  padding: 1rem 1rem;
+  padding: 1rem;
   gap: 2rem;
+  touch-action: none;
 }
 
 .testimonial-shifting-container::-webkit-scrollbar {
@@ -540,7 +541,7 @@ body {
   flex-shrink: 0;
   width: 250px;
   height: 400px;
-  transition: all 1s ease-in;
+  transition: all 0.75s ease-in;
 }
 .testimonial-block img {
   height: 250px;

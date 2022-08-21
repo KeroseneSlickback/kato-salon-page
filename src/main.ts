@@ -86,8 +86,6 @@ const runCarousel = async () => {
 
 runCarousel();
 
-let testimonialNumber = 6;
-
 const testimonials = Array.from(
   document.querySelectorAll(".testimonial-block")
 );
@@ -105,14 +103,11 @@ const runTestimonialCycle = () => {
   testimonialContainer?.scrollBy(testimonialContainerWidth, 0);
   setTimeout(() => {
     testimonialIndex = testimonialIndex % testimonials.length;
-    let childToMove = <HTMLElement>testimonials[testimonialIndex]!;
-    console.log(childToMove);
-    if (childToMove) {
-      childToMove.style.order =
-        childToMove.style.order && childToMove.style.order === 0
-          ? 1
-          : +childToMove.style.order + 1;
-    }
+    let childToMove = testimonials[testimonialIndex] as any;
+    childToMove.style.order =
+      childToMove.style.order && childToMove.style.order === 0
+        ? 1
+        : +childToMove.style.order + 1;
     testimonialIndex++;
     runTestimonialCycle();
   }, testimonialTimer);
