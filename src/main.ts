@@ -86,33 +86,35 @@ const runCarousel = async () => {
 
 runCarousel();
 
-const testimonials = Array.from(
-  document.querySelectorAll(".testimonial-block")
-);
-const testimonialContainer = document.querySelector(
-  ".testimonial-shifting-container"
-);
-const testimonialContainerWidth = testimonialContainer
-  ? testimonialContainer.scrollWidth / testimonials.length
-  : 0;
+const testimonialArray = document.querySelectorAll(".testimonial-block");
 
-let testimonialIndex = 0;
-let testimonialTimer = 4000;
-
-const runTestimonialCycle = () => {
-  testimonialContainer?.scrollBy(testimonialContainerWidth, 0);
+const runTestTestimonialCycle = () => {
   setTimeout(() => {
-    testimonialIndex = testimonialIndex % testimonials.length;
-    let childToMove = testimonials[testimonialIndex] as any;
-    childToMove.style.order =
-      childToMove.style.order && childToMove.style.order === 0
-        ? 1
-        : +childToMove.style.order + 1;
-    testimonialIndex++;
-    runTestimonialCycle();
-  }, testimonialTimer);
+    testimonialArray.forEach((element) => {
+      if (element.classList.contains("previous")) {
+        element.classList.remove("previous");
+        element.classList.add("hidden-3");
+      } else if (element.classList.contains("center")) {
+        element.classList.remove("center");
+        element.classList.add("previous");
+      } else if (element.classList.contains("next")) {
+        element.classList.remove("next");
+        element.classList.add("center");
+      } else if (element.classList.contains("hidden-3")) {
+        element.classList.remove("hidden-3");
+        element.classList.add("hidden-2");
+      } else if (element.classList.contains("hidden-2")) {
+        element.classList.remove("hidden-2");
+        element.classList.add("hidden-1");
+      } else if (element.classList.contains("hidden-1")) {
+        element.classList.remove("hidden-1");
+        element.classList.add("next");
+      }
+    });
+    runTestTestimonialCycle();
+  }, 2000);
 };
 
-runTestimonialCycle();
+runTestTestimonialCycle();
 
 export {};
