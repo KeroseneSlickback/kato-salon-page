@@ -112,7 +112,7 @@ const runTestTestimonialCycle = () => {
       }
     });
     runTestTestimonialCycle();
-  }, 2000);
+  }, 4000);
 };
 
 runTestTestimonialCycle();
