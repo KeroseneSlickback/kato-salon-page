@@ -23,7 +23,7 @@ body {
   font-size: 1.5rem;
   text-align: center;
   line-height: 1;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 .container {
@@ -103,8 +103,12 @@ body {
 // Header styling
 
 .primary-header {
+  // position: sticky;
+  // top: 0;
+  // z-index: 100;
+  background-color: $yellow3;
   width: 100%;
-  height: 3.5rem;
+  height: 4rem;
   display: flex;
   align-items: center;
 }
@@ -460,7 +464,7 @@ body {
   aspect-ratio: 2/3;
   h4 {
     position: absolute;
-    bottom: 15px;
+    bottom: 1rem;
     color: $yellow3;
     font-size: 1.1rem;
     line-height: 0;
@@ -528,4 +532,61 @@ body {
       opacity: 0;
     }
   }
+}
+
+.testimonial-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-shifting-container {
+  display: flex;
+  overflow: auto;
+  flex-wrap: nowrap;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+  max-width: 100vw;
+  padding: 1rem 1rem;
+  gap: 2rem;
+}
+
+.testimonial-shifting-container::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-block {
+  position: relative;
+  flex-grow: 0;
+  flex-shrink: 0;
+  // max-width: 100%;
+  scroll-snap-align: center;
+  flex-shrink: 0;
+  width: 250px;
+  height: 400px;
+  transition: all 1s ease-in;
+  img {
+    height: 250px;
+  }
+  h5 {
+    font-size: 1.25rem;
+    line-height: 1;
+    margin: 1rem 0.5rem 0.5rem 0.5rem;
+  }
+  p {
+    margin: 0.5rem;
+  }
+}
+
+.testimonial-block::after {
+  content: "";
+  position: absolute;
+  top: 3.5rem;
+  left: 1rem;
+  width: 250px;
+  height: 350px;
+  border-bottom: 4px solid $yellow1;
+  border-right: 4px solid $yellow1;
 }

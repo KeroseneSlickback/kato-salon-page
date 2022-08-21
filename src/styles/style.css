@@ -13,7 +13,7 @@ body {
   font-size: 1.5rem;
   text-align: center;
   line-height: 1;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 .container {
@@ -86,8 +86,9 @@ body {
 }
 
 .primary-header {
+  background-color: #fffad2;
   width: 100%;
-  height: 3.5rem;
+  height: 4rem;
   display: flex;
   align-items: center;
 }
@@ -443,7 +444,7 @@ body {
 }
 .service-block h4 {
   position: absolute;
-  bottom: 15px;
+  bottom: 1rem;
   color: #fffad2;
   font-size: 1.1rem;
   line-height: 0;
@@ -506,4 +507,60 @@ body {
   .picture-overlay-div div {
     opacity: 0;
   }
+}
+.testimonial-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-shifting-container {
+  display: flex;
+  overflow: auto;
+  flex-wrap: nowrap;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+  max-width: 100vw;
+  padding: 1rem 1rem;
+  gap: 2rem;
+}
+
+.testimonial-shifting-container::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-block {
+  position: relative;
+  flex-grow: 0;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  flex-shrink: 0;
+  width: 250px;
+  height: 400px;
+  transition: all 1s ease-in;
+}
+.testimonial-block img {
+  height: 250px;
+}
+.testimonial-block h5 {
+  font-size: 1.25rem;
+  line-height: 1;
+  margin: 1rem 0.5rem 0.5rem 0.5rem;
+}
+.testimonial-block p {
+  margin: 0.5rem;
+}
+
+.testimonial-block::after {
+  content: "";
+  position: absolute;
+  top: 3.5rem;
+  left: 1rem;
+  width: 250px;
+  height: 350px;
+  border-bottom: 4px solid #ffd300;
+  border-right: 4px solid #ffd300;
 }/*# sourceMappingURL=style.css.map */
