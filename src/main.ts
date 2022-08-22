@@ -7,6 +7,20 @@ const navBookButtonContainer = document.querySelector(
 const navBookButton = document.querySelector(".nav-book-button");
 const mobileBackdrop = document.querySelector(".mobile-backdrop");
 
+const hideNavbar = () => {
+  primaryNav?.setAttribute("data-visible", "false");
+  navSpanLines.forEach((span) => {
+    span.setAttribute("data-visible", "false");
+  });
+  setTimeout(() => {
+    mobileBackdrop?.setAttribute("data-visible", "false");
+  }, 100);
+  setTimeout(() => {
+    navBookButtonContainer?.setAttribute("data-visible", "false");
+    navBookButton?.setAttribute("data-visible", "false");
+  }, 200);
+};
+
 const mobileNavSlide = () => {
   const visibility = primaryNav?.getAttribute("data-visible");
   if (visibility === "false") {
@@ -31,6 +45,12 @@ const mobileNavSlide = () => {
     }, 200);
   }
 };
+
+const navbarAs = document.querySelectorAll(".nav-a");
+
+navbarAs.forEach((element) => {
+  element.addEventListener("click", hideNavbar);
+});
 
 navToggle?.addEventListener("click", mobileNavSlide);
 mobileBackdrop?.addEventListener("click", mobileNavSlide);

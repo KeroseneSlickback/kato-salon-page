@@ -39,10 +39,12 @@
             class="primary-navigation"
             data-visible="false"
           >
-            <li class="active"><a href="#">About Me</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">Contact</a></li>
+            <li class="active">
+              <a class="nav-a" href="#aboutme">About Me</a>
+            </li>
+            <li><a class="nav-a" href="#services">Services</a></li>
+            <li><a class="nav-a" href="#testimonials">Testimonials</a></li>
+            <li><a class="nav-a" href="#contact">Contact</a></li>
             <div class="button-box nav-book-button-container">
               <button class="button nav-book-button" data-visible="false">
                 Start Booking
@@ -78,7 +80,7 @@
             class="styled-photo"
           />
         </div>
-        <div class="showcase-contact-container">
+        <div class="contact-container">
           <div>
             <img src="src/images//icons/location.svg" alt="location" />
             <p>8842 West Virtue Ave, Los Angelos California</p>
@@ -95,7 +97,7 @@
           </div>
         </div>
       </section>
-      <section class="container about-me-container">
+      <section id="aboutme" class="container about-me-container">
         <h4 class="section-header">About Me</h4>
         <div class="about-me-carousel-container">
           <div class="about-me-carousel">
@@ -131,7 +133,7 @@
           </p>
         </div>
       </section>
-      <section class="container services-container">
+      <section id="services" class="container services-container">
         <h4 class="section-header">Services</h4>
         <div class="service-block-container">
           <div class="service-block">
@@ -187,7 +189,7 @@
           <button class="button">Start Booking</button>
         </div>
       </section>
-      <section class="container testimonial-container">
+      <section id="testimonials" class="container testimonial-container">
         <h4 class="section-header">What My Customers Love about My Services</h4>
         <div class="testimonial-spinner-container">
           <div class="testimonial-block previous">
@@ -252,56 +254,62 @@
           </div>
         </div>
       </section>
-      <section class="container">
-        <h4>Contact</h4>
+      <section id="contact" class="container">
+        <h4 class="section-header">Contact</h4>
         <div>
-          <div>
-            <button>Start Booking</button>
+          <div class="contact-left">
+            <div class="secondary-button-box button-box-large">
+              <button class="button button-dark button-large">
+                Start Booking
+              </button>
+            </div>
             <h4>For any Questions:</h4>
-            <div>
-              <span>
+            <div class="contact-container">
+              <div>
                 <img src="src/images/icons/phone.svg" alt="phone number" />
                 <p>1 (802) 390 - 1290</p>
-              </span>
-              <span>
+              </div>
+              <div>
                 <img src="src/images/icons/email.svg" alt="email" />
                 <p>Rimi@KatoBeauty.com</p>
-              </span>
+              </div>
             </div>
-            <div>
+          </div>
+          <div class="contact-right">
+            <div class="contact-container">
               <div>
                 <img src="src/images//icons/location.svg" alt="location" />
                 <p>8842 West Virtue Ave, Los Angelos California</p>
               </div>
-              <!-- <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9442.236202803306!2d140.3219930713433!3d38.260479322556385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8bb623d7579f35%3A0xb364c836e59148da!2sSukiya!5e0!3m2!1sen!2sus!4v1660615107357!5m2!1sen!2sus"
-                width="250"
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16627.3761003414!2d140.31614012578765!3d38.275915998710445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8bc83087e674f9%3A0x19695536b4745523!2sDon%20Quijote!5e0!3m2!1sen!2sus!4v1661163267342!5m2!1sen!2sus"
+                width="90%"
                 height="300"
                 style="border: 0"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-              ></iframe> -->
+              ></iframe>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="footer-container">
       <div class="container">
-        <div>
+        <div class="footer-nav-container">
+          <ul role="list" class="footer-nav-ul">
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-demo">
           <p>
             This app was made by Mitchell William Spaur for demonstration
             purposes.
           </p>
-        </div>
-        <div>
-          <ul role="list">
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
         </div>
       </div>
     </footer>

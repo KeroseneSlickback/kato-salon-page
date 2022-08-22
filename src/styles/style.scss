@@ -21,9 +21,10 @@ body {
 
 .section-header {
   font-size: 1.5rem;
+  font-weight: 900;
   text-align: center;
   line-height: 1;
-  margin: 1.5rem 0;
+  padding: 1.5rem 0;
 }
 
 .container {
@@ -49,8 +50,8 @@ body {
 .button {
   background-color: $yellow1;
   border: none;
-  font-size: 1rem;
-  padding: 8px 16px;
+  font-size: 1.125rem;
+  padding: 0.625rem 0.875rem;
   transition: 0.08s;
   transform: translate(-4px, -4px);
 
@@ -88,7 +89,7 @@ body {
 }
 
 .secondary-button {
-  padding: 4px 10px;
+  padding: 0.5rem 1rem;
   background-color: $yellow3;
   border: 2px solid $purple2;
   border-style: inset;
@@ -97,6 +98,28 @@ body {
   }
   &:active {
     border: 2px solid transparent;
+  }
+}
+
+.button-large {
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+
+  transform: translate(-5px, -5px);
+}
+
+.button-box-large {
+  border: 3px solid $purple2;
+  transform: translate(2.5px, 2.5px);
+}
+
+.button-dark {
+  background-color: $purple2;
+  color: $white;
+
+  &:hover {
+    background-color: $purple3;
+    color: $white;
   }
 }
 
@@ -345,7 +368,7 @@ body {
   border: 3px solid $purple2;
 }
 
-.showcase-contact-container {
+.contact-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -361,7 +384,7 @@ body {
     margin-right: 0.2rem;
   }
   p {
-    font-size: 12px;
+    font-size: 0.875rem;
     word-wrap: break-word;
     align-self: center;
   }
@@ -616,4 +639,48 @@ body {
   z-index: -1;
   opacity: 0;
   transform: translate(0px, 0px) scale(0);
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h4 {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-container {
+  background-color: $white;
+  margin-top: 1rem;
+}
+
+.footer-nav-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  height: 6rem;
+  padding: 1rem 0;
+  margin: 0;
+  li,
+  a {
+    text-decoration: none;
+    list-style: none;
+  }
+}
+
+.footer-demo {
+  p {
+    font-size: 0.75rem;
+  }
 }
