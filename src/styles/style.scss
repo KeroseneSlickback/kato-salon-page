@@ -13,10 +13,30 @@ $black: #212121;
   color: $purple1;
 }
 
+:root {
+  --width: 100vw;
+
+  @media (min-width: 42em) {
+    --width: 42rem;
+  }
+
+  --angle: -7deg;
+  /*-----------------
+  Magic Number Alert:
+  
+  the 0.09719 is calculated by this formula:
+  tan(11°) / 2
+  11° is the current skewY value.
+  ------------------*/
+  --magic-number: 0.09719;
+  --skew-padding: calc(var(--width) * var(--magic-number));
+}
+
 body {
-  background-color: $yellow3;
   width: 100%;
+  height: 100%;
   overflow-x: hidden;
+  background: $yellow3;
 }
 
 .section-header {
@@ -24,119 +44,70 @@ body {
   font-weight: 900;
   text-align: center;
   line-height: 1;
-  padding: 1.5rem 0;
+  padding: 0.5rem 0 1.5rem 0;
 }
 
 .container {
-  $padding: 1rem;
-  $max-width: 1110px;
-
-  width: min($max-width, 100% - $padding * 2);
-  margin-inline: auto;
+  max-width: var(--width);
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-// Button styling
-
-.button-box {
-  width: fit-content;
-  border: 2px solid $yellow1;
-  transform: translate(2px, 2px);
-}
-
-.button-box[data-visible="true"] {
-  border: 2px solid $purple2;
-}
-
-.button {
-  background-color: $yellow1;
-  border: none;
-  font-size: 1.125rem;
-  padding: 0.625rem 0.875rem;
-  transition: 0.08s;
-  transform: translate(-4px, -4px);
-
-  &:hover {
-    background-color: $yellow2;
-    color: $purple2;
-  }
-  &:active {
-    transform: translate(0px, 0px);
+.diagonal-container {
+  z-index: 2;
+  position: relative;
+  padding: var(--skew-padding) 0;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform: skewY(var(--angle));
+    background-image: linear-gradient(180deg, $yellow3, $yellow2);
+    border-top: 4px solid $yellow1;
+    border-bottom: 4px solid $yellow1;
+    box-shadow: $white 0px 4px 0px 0px, $yellow2 0px 8px,
+      $white 0px 12px 0px 0px, $yellow3 0px 16px, $white 0px -4px 0px 0px,
+      $yellow2 0px -8px, $white 0px -12px 0px 0px, $yellow3 0px -16px;
   }
 }
 
-.button[data-visible="true"] {
-  background-color: $purple2;
-  color: $white;
-
-  &:hover {
-    background-color: $purple3;
+.top-container {
+  &:before {
+    border-top: none;
+    box-shadow: $white 0px 4px 0px 0px, $yellow2 0px 8px,
+      $white 0px 12px 0px 0px, $yellow3 0px 16px;
   }
 }
 
-.button-box-reverse {
-  transform: translate(-2px, 2px);
+.reverse-diagonal-container {
+  position: relative;
 }
 
-.button-reverse {
-  transform: translate(4px, -4px);
-  &:active {
-    transform: translate(0px, 0px);
-  }
-}
-
-.secondary-button-box {
-  border: 2px solid $purple2;
-}
-
-.secondary-button {
-  padding: 0.5rem 1rem;
-  background-color: $yellow3;
-  border: 2px solid $purple2;
-  border-style: inset;
-  &:hover {
-    background-color: $yellow3;
-  }
-  &:active {
-    border: 2px solid transparent;
-  }
-}
-
-.button-large {
-  font-size: 1.5rem;
-  padding: 1rem 1.5rem;
-
-  transform: translate(-5px, -5px);
-}
-
-.button-box-large {
-  border: 3px solid $purple2;
-  transform: translate(2.5px, 2.5px);
-}
-
-.button-dark {
-  background-color: $purple2;
-  color: $white;
-
-  &:hover {
-    background-color: $purple3;
-    color: $white;
+.white-container {
+  z-index: 1;
+  &:before {
+    background-image: none;
+    border: none;
+    background-color: $white;
   }
 }
 
 // Header styling
 
 .primary-header {
-  // position: sticky;
-  // top: 0;
-  // z-index: 100;
   background-color: $yellow3;
   width: 100%;
   height: 4rem;
   display: flex;
   align-items: center;
+  z-index: 100;
 }
 
 .header-container {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -148,6 +119,7 @@ body {
 }
 
 .logo-link {
+  z-index: 100;
   position: relative;
   display: flex;
   align-items: center;
@@ -311,7 +283,6 @@ body {
 }
 
 .showcase-message-container {
-  margin: 1.25rem 0;
   display: grid;
   grid-template-rows: 0.75fr, 1fr, 1.25fr, 1fr, 2fr;
 
@@ -363,6 +334,7 @@ body {
 }
 
 .picture-container-dark {
+  margin: 1rem 0;
   transform: translate(4px, 4px);
   width: fit-content;
   border: 3px solid $purple2;
@@ -374,7 +346,6 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin: 1.25rem 0 0 0;
 
   div {
     display: flex;
@@ -412,9 +383,9 @@ body {
 
 .about-me-carousel {
   position: relative;
-  width: 280px;
-  height: 400px;
-  transform: translate(-8px, -8px);
+  aspect-ratio: 2/3;
+  width: calc(100vw - 3rem);
+  transform: translate(-0.5rem, -0.5rem);
   background-color: $yellow1;
   padding: 1rem;
   display: flex;
@@ -431,14 +402,14 @@ body {
 
 .carousel-top-left {
   z-index: 1;
-  transform: translate(-30px, -40px);
+  transform: translate(-1.875rem, -2.875rem);
   filter: brightness(30%);
   opacity: 90%;
 }
 
 .carousel-bottom-right {
   z-index: 1;
-  transform: translate(30px, 40px);
+  transform: translate(1.875rem, 2.875rem);
   filter: brightness(30%);
   opacity: 90%;
 }
@@ -659,7 +630,12 @@ body {
 
 .footer-container {
   background-color: $white;
-  margin-top: 1rem;
+
+  padding: 2rem 0 0 0;
+  &:before {
+    border-bottom: none;
+    box-shadow: none;
+  }
 }
 
 .footer-nav-ul {
@@ -682,5 +658,94 @@ body {
 .footer-demo {
   p {
     font-size: 0.75rem;
+  }
+}
+
+// Button styling
+
+.button-box {
+  width: fit-content;
+  border: 2px solid $yellow1;
+  transform: translate(2px, 2px);
+}
+
+.button-box[data-visible="true"] {
+  border: 2px solid $purple2;
+}
+
+.button {
+  z-index: 1;
+  background-color: $yellow1;
+  border: none;
+  font-size: 1.125rem;
+  padding: 0.625rem 0.875rem;
+  transition: 0.08s;
+  transform: translate(-4px, -4px);
+
+  &:hover {
+    background-color: $yellow2;
+    color: $purple2;
+  }
+  &:active {
+    transform: translate(0px, 0px);
+  }
+}
+
+.button[data-visible="true"] {
+  background-color: $purple2;
+  color: $white;
+
+  &:hover {
+    background-color: $purple3;
+  }
+}
+
+.button-box-reverse {
+  transform: translate(-2px, 2px);
+}
+
+.button-reverse {
+  transform: translate(4px, -4px);
+  &:active {
+    transform: translate(0px, 0px);
+  }
+}
+
+.secondary-button-box {
+  border: 2px solid $purple2;
+}
+
+.secondary-button {
+  padding: 0.5rem 1rem;
+  background-color: $yellow3;
+  border: 2px solid $purple2;
+  border-style: inset;
+  &:hover {
+    background-color: $yellow3;
+  }
+  &:active {
+    border: 2px solid transparent;
+  }
+}
+
+.button-large {
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+
+  transform: translate(-5px, -5px);
+}
+
+.button-box-large {
+  border: 3px solid $purple2;
+  transform: translate(2.5px, 2.5px);
+}
+
+.button-dark {
+  background-color: $purple2;
+  color: $white;
+
+  &:hover {
+    background-color: $purple3;
+    color: $white;
   }
 }
