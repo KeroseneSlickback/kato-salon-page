@@ -6,7 +6,7 @@
 
 :root {
   --width: 100vw;
-  --angle: -7deg;
+  --angle: -6deg;
   /*-----------------
   Magic Number Alert:
 
@@ -515,11 +515,6 @@ body {
   opacity: 1;
 }
 
-@media only screen and (min-width: 768px) {
-  .picture-overlay-div div {
-    opacity: 0;
-  }
-}
 .testimonial-container {
   display: flex;
   flex-direction: column;
@@ -760,6 +755,29 @@ body {
   .picture-container-dark img {
     max-width: 16rem;
   }
+  .service-block-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.75rem;
+  }
+  .service-block {
+    height: 250px;
+  }
+  .service-block h4 {
+    font-size: 0.8rem;
+  }
+  .picture-overlay-div img {
+    height: 250px;
+  }
+  .picture-overlay-div div {
+    height: 250px;
+  }
+  .picture-overlay-div div p {
+    font-size: 0.75rem;
+  }
+  .picture-overlay-div div h5 {
+    font-size: 0.875rem;
+  }
 }
 @media only screen and (min-width: 48rem) {
   .header-container {
@@ -801,6 +819,37 @@ body {
   .section-header {
     grid-column: span 2;
   }
+  .service-block-container {
+    gap: 2rem;
+  }
+  .service-block {
+    height: 300px;
+  }
+  .service-block h4 {
+    font-size: 1rem;
+  }
+  .picture-overlay-div img {
+    height: 300px;
+  }
+  .picture-overlay-div div {
+    height: 300px;
+  }
+  .picture-overlay-div div p {
+    font-size: 0.8rem;
+  }
+  .picture-overlay-div div h5 {
+    font-size: 1rem;
+  }
+  .service-button-block {
+    margin-top: 1rem;
+    border: 3px solid #681d94;
+    transform: translate(3px, 3px);
+  }
+  .service-button-block button {
+    transform: translate(-5px, -5px);
+    padding: 0.875rem 1.5rem;
+    font-size: 1.5rem;
+  }
 }
 @media only screen and (min-width: 53.125rem) {
   .picture-container-dark img {
@@ -820,5 +869,58 @@ body {
   }
   .showcase-button-container {
     padding: 0 1.5rem;
+  }
+  .service-block-container {
+    gap: 3rem;
+  }
+  .service-block {
+    height: 325px;
+  }
+  .service-block h4 {
+    font-size: 1rem;
+  }
+  .picture-overlay-div img {
+    height: 325px;
+  }
+  .picture-overlay-div div {
+    height: 325px;
+  }
+  .picture-overlay-div div p {
+    font-size: 0.85rem;
+  }
+  .picture-overlay-div div h5 {
+    font-size: 1rem;
+  }
+  .previous {
+    transform: translateX(-18rem) scale(0.8);
+  }
+  .next {
+    transform: translateX(18rem) scale(0.8);
+  }
+}
+@media only screen and (min-width: 64rem) {
+  .picture-overlay-div div {
+    opacity: 0;
+  }
+  .service-block-container {
+    gap: 4rem;
+  }
+  .service-block {
+    height: 350px;
+  }
+  .service-block h4 {
+    font-size: 1.1rem;
+  }
+  .picture-overlay-div img {
+    height: 350px;
+  }
+  .picture-overlay-div div {
+    height: 350px;
+  }
+  .picture-overlay-div div p {
+    font-size: 0.9rem;
+  }
+  .picture-overlay-div div h5 {
+    font-size: 1.2rem;
   }
 }/*# sourceMappingURL=style.css.map */

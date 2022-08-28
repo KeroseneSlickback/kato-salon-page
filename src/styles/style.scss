@@ -20,7 +20,7 @@ $black: #212121;
     --width: 42rem;
   }
 
-  --angle: -7deg;
+  --angle: -6deg;
   /*-----------------
   Magic Number Alert:
   
@@ -528,14 +528,6 @@ body {
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .picture-overlay-div {
-    div {
-      opacity: 0;
-    }
-  }
-}
-
 .testimonial-container {
   display: flex;
   flex-direction: column;
@@ -802,6 +794,33 @@ $laptop: 64rem;
       max-width: 16rem;
     }
   }
+  .service-block-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.75rem;
+  }
+
+  .service-block {
+    height: 250px;
+    h4 {
+      font-size: 0.8rem;
+    }
+  }
+
+  .picture-overlay-div {
+    img {
+      height: 250px;
+    }
+    div {
+      height: 250px;
+      p {
+        font-size: 0.75rem;
+      }
+      h5 {
+        font-size: 0.875rem;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $tabletM) {
@@ -847,6 +866,42 @@ $laptop: 64rem;
   .section-header {
     grid-column: span 2;
   }
+  .service-block-container {
+    gap: 2rem;
+  }
+
+  .service-block {
+    height: 300px;
+    h4 {
+      font-size: 1rem;
+    }
+  }
+
+  .picture-overlay-div {
+    img {
+      height: 300px;
+    }
+    div {
+      height: 300px;
+      p {
+        font-size: 0.8rem;
+      }
+      h5 {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .service-button-block {
+    margin-top: 1rem;
+    border: 3px solid $purple2;
+    transform: translate(3px, 3px);
+    button {
+      transform: translate(-5px, -5px);
+      padding: 0.875rem 1.5rem;
+      font-size: 1.5rem;
+    }
+  }
 }
 
 @media only screen and (min-width: $tabletL) {
@@ -871,7 +926,72 @@ $laptop: 64rem;
   .showcase-button-container {
     padding: 0 1.5rem;
   }
+
+  .service-block-container {
+    gap: 3rem;
+  }
+
+  .service-block {
+    height: 325px;
+    h4 {
+      font-size: 1rem;
+    }
+  }
+
+  .picture-overlay-div {
+    img {
+      height: 325px;
+    }
+    div {
+      height: 325px;
+      p {
+        font-size: 0.85rem;
+      }
+      h5 {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .previous {
+    transform: translateX(-18rem) scale(0.8);
+  }
+
+  .next {
+    transform: translateX(18rem) scale(0.8);
+  }
 }
 
 @media only screen and (min-width: $laptop) {
+  .picture-overlay-div {
+    div {
+      opacity: 0;
+    }
+  }
+
+  .service-block-container {
+    gap: 4rem;
+  }
+
+  .service-block {
+    height: 350px;
+    h4 {
+      font-size: 1.1rem;
+    }
+  }
+
+  .picture-overlay-div {
+    img {
+      height: 350px;
+    }
+    div {
+      height: 350px;
+      p {
+        font-size: 0.9rem;
+      }
+      h5 {
+        font-size: 1.2rem;
+      }
+    }
+  }
 }
