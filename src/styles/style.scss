@@ -773,9 +773,25 @@ $laptop: 64rem;
 }
 
 @media only screen and (min-width: $mobileL) {
+  .contact-container {
+    padding: 0.5rem 0rem 0.5rem 1rem;
+  }
 }
 
 @media only screen and (min-width: $tabletS) {
+  .showcase-container {
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;
+    gap: 1rem;
+  }
+
+  .picture-container-dark {
+    grid-row: span 2;
+    align-self: start;
+    img {
+      max-width: 16rem;
+    }
+  }
 }
 
 @media only screen and (min-width: $tabletM) {
@@ -795,9 +811,46 @@ $laptop: 64rem;
     padding: 0rem;
     gap: 0.625rem;
   }
+  .showcase-message-container {
+    h4 {
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+    h1 {
+      font-size: 4.25rem;
+    }
+  }
+  .picture-container-dark {
+    img {
+      max-width: 20rem;
+    }
+  }
 }
 
 @media only screen and (min-width: $tabletL) {
+  .picture-container-dark {
+    img {
+      max-width: 22rem;
+    }
+  }
+  .showcase-message-container {
+    width: 24rem;
+
+    h4 {
+      font-size: 1.75rem;
+    }
+    h2 {
+      font-size: 3rem;
+    }
+    h1 {
+      font-size: 5rem;
+    }
+  }
+  .showcase-button-container {
+    padding: 0 1.5rem;
+  }
 }
 
 @media only screen and (min-width: $laptop) {
