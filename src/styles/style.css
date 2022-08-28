@@ -52,6 +52,9 @@ body {
   z-index: 2;
   position: relative;
   padding: var(--skew-padding) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .diagonal-container:before {
   content: "";
@@ -380,7 +383,7 @@ body {
 .about-me-carousel {
   position: relative;
   aspect-ratio: 2/3;
-  width: calc(100vw - 3rem);
+  width: 18rem;
   transform: translate(-0.5rem, -0.5rem);
   background-color: #ffd300;
   padding: 1rem;
@@ -399,16 +402,16 @@ body {
 
 .carousel-top-left {
   z-index: 1;
-  transform: translate(-1.875rem, -2.875rem);
-  filter: brightness(30%);
-  opacity: 90%;
+  transform: translate(-2.125rem, -3.5rem);
+  filter: brightness(25%);
+  opacity: 75%;
 }
 
 .carousel-bottom-right {
   z-index: 1;
-  transform: translate(1.875rem, 2.875rem);
-  filter: brightness(30%);
-  opacity: 90%;
+  transform: translate(2.125rem, 3.5rem);
+  filter: brightness(25%);
+  opacity: 75%;
 }
 
 .carousel-center {
@@ -418,7 +421,7 @@ body {
 }
 
 .about-me-text-container h5 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: center;
   margin: 1rem 0 0.5rem 0;
 }
@@ -737,6 +740,12 @@ body {
   .contact-container {
     padding: 0.5rem 0rem 0.5rem 1rem;
   }
+  .about-me-text-container {
+    max-width: 30rem;
+  }
+  .about-me-text-container p {
+    font-size: 1rem;
+  }
 }
 @media only screen and (min-width: 37.5rem) {
   .showcase-container {
@@ -780,6 +789,17 @@ body {
   }
   .picture-container-dark img {
     max-width: 20rem;
+  }
+  .about-me-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 0fr 1fr;
+    max-width: calc(100vw - 1rem);
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+  .section-header {
+    grid-column: span 2;
   }
 }
 @media only screen and (min-width: 53.125rem) {
