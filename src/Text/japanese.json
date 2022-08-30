@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "about": "私について",
+    "services": "メニュー",
+    "testimonials": "レビュー",
+    "contact": "お問い合せ"
+  },
+  "button": {
+    "book": "ご予約",
+    "explore": "Explore"
+  },
+  "headings": {
+    "about": "私について",
+    "services": "メニュー",
+    "testimonials": "レビュー",
+    "contact": "お問い合せ"
+  },
+  "showcase": {
+    "block1": "We Help You",
+    "block2": "Redefine",
+    "block3": "Your",
+    "block4": "Beauty"
+  },
+  "contactInfo": {
+    "address": "〒990-0886 山形県山形市嶋南3丁目16-13"
+  },
+  "aboutMe": {
+    "header": "I'm Rimi, an Amazing Hair Stylist",
+    "body": "患者の世話をすること、医師に従うことは重要ですが、それは大きな痛みと苦しみの時です。 というのは、私は、そこから何らかの利益を得るために労働者のいずれも行使しないという、細部にまで行き着くからです。 疑いや不快な痛みは快楽に表れ、彼は苦痛の毛になりたいと思っており、喜びは誕生を逃れません。 彼らは欲望に目がくらんでいない限り、彼らは出てこない、彼らは彼らの義務を放棄した人々のせいであり、魂は柔らかくなります。"
+  },
+  "services": {
+    "firstDesc": "患者の世話をすること、医師に従うことは重要ですが、それは大きな痛みと苦しみの時です。",
+    "firstDetail": "6000円 - 2hr サービス",
+    "firstHeading": "カラー + ハイライト",
+    "secondDesc": "患者の世話をすること、医師に従うことは重要ですが、それは大きな痛みと苦しみの時です。",
+    "secondDetail": "10000円 - 4hr サービス",
+    "secondHeading": "着物アレンジ",
+    "thirdDesc": "患者の世話をすること、医師に従うことは重要ですが、それは大きな痛みと苦しみの時です。",
+    "thirdDetail": "5000円 - 1.5hr サービス",
+    "thirdHeading": "カット + スタイル"
+  },
+  "testimonials": {
+    "firstName": "芽依",
+    "firstTest": "いつもりみさんの素晴らしい仕事。 私は2週間ごとに戻ってきて、髪をすばらしく保ちます!",
+    "secondName": "紬",
+    "secondTest": "Rimiは大学の卒業式で私を素晴らしく見せてくれました。 彼女を十分に推薦することはできません！",
+    "thirdName": "陽翔",
+    "thirdTest": "こんなに格好いいとは思わなかった！",
+    "fourthName": "芽依",
+    "fourthTest": "いつもりみさんの素晴らしい仕事。 私は2週間ごとに戻ってきて、髪をすばらしく保ちます!",
+    "fifthName": "紬",
+    "fifthTest": "Rimiは大学の卒業式で私を素晴らしく見せてくれました。 彼女を十分に推薦することはできません！",
+    "sixthName": "陽翔",
+    "sixthTest": "こんなに格好いいとは思わなかった！"
+  },
+  "contact": {
+    "heading": "お問い合わせについて"
+  }
+}

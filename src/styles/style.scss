@@ -293,6 +293,20 @@ body {
   background-color: rgba(0, 0, 0, 0.75);
 }
 
+.language {
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: transparent;
+  img {
+    opacity: 0.5;
+    height: 1.5rem;
+  }
+}
+
 .showcase-container {
   display: grid;
   justify-items: center;
@@ -867,7 +881,7 @@ $laptop: 64rem;
     position: relative;
     flex-direction: row;
     padding: 0rem;
-    gap: 0.625rem;
+    gap: 0rem;
   }
   .showcase-message-container {
     h4 {
@@ -942,6 +956,9 @@ $laptop: 64rem;
 }
 
 @media only screen and (min-width: $tabletL) {
+  .primary-navigation {
+    gap: 0.625rem;
+  }
   .picture-container-dark {
     img {
       max-width: 22rem;
