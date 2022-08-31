@@ -1,16 +1,61 @@
-// fetch("./src/text/english.json")
-//   .then((res) => {
-//     return res.json();
-//   })
-//   .then((data) => {
-//     console.log(data);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
+let englishScript: any;
+let japaneseScript: any;
+let langauge = "en";
+let languageChoices = ["en", "jp"];
 
-// let langauge = "en";
-// let languageChoices = ["en", "jp"];
+document.addEventListener("DOMContentLoaded", async () => {
+  let lang = await findLocalMatch();
+  applyStrings(lang);
+});
+
+const applyStrings = (lang: any) => {
+  const containers = document.querySelectorAll("[data-key]");
+  containers.forEach((container) => {
+    let key = container.getAttribute("data-key");
+    let keys = key?.split("-");
+
+    if (lang === "en" && keys) {
+      console.log(englishScript[keys[0]][keys[1]]);
+      container.textContent = englishScript[keys[0]][keys[1]];
+    } else if (lang === "ja" && keys) {
+      console.log(japaneseScript[keys[0]][keys[1]]);
+      container.textContent = japaneseScript[keys[0]][keys[1]];
+    }
+    // let string = englishScript[keys[0]][keys[1]];
+    // console.log(string);
+  });
+};
+
+const findLocalMatch = async () => {
+  let chosenLanguage = navigator.language.substring(0, 2);
+
+  if (chosenLanguage === "en") {
+    englishScript = await fetch("./src/text/english.json")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        return data;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    chosenLanguage = "en";
+  } else if (chosenLanguage === "ja") {
+    japaneseScript = await fetch("./src/text/japanese.json")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        return data;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    chosenLanguage = "ja";
+  }
+  return chosenLanguage;
+};
 
 const primaryNav = document.querySelector(".primary-navigation");
 const navToggle = document.querySelector(".mobile-nav-toggle");
