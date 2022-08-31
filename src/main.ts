@@ -1,3 +1,17 @@
+// fetch("./src/text/english.json")
+//   .then((res) => {
+//     return res.json();
+//   })
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+// let langauge = "en";
+// let languageChoices = ["en", "jp"];
+
 const primaryNav = document.querySelector(".primary-navigation");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const navSpanLines = document.querySelectorAll(".nav-span");
