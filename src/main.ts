@@ -1,14 +1,27 @@
 let englishScript: any;
 let japaneseScript: any;
 let defaultLangauge = "en";
-let languageChoices = ["en", "jp"];
+let currentLanguage = "en";
+
+document.querySelector(".language")?.addEventListener("click", () => {
+  if (currentLanguage === "en") {
+    currentLanguage = "ja";
+    applyStrings("ja");
+  } else {
+    currentLanguage = "en";
+    applyStrings("en");
+  }
+});
 
 document.addEventListener("DOMContentLoaded", async () => {
-  let lang = await findLocalMatch();
-  if (lang === defaultLangauge) {
+  await loadLanguages();
+  let browserLang = navigator.language.substring(0, 2);
+  let storedLang = localStorage.getItem("langauge");
+  if (browserLang === defaultLangauge) {
     return;
   }
-  applyStrings(lang);
+  applyStrings(browserLang);
+  currentLanguage = browserLang;
 });
 
 const applyStrings = (lang: any) => {
@@ -16,7 +29,6 @@ const applyStrings = (lang: any) => {
   containers.forEach((container) => {
     let key = container.getAttribute("data-key");
     let keys = key?.split("-");
-
     if (lang === "en" && keys) {
       container.textContent = englishScript[keys[0]][keys[1]];
     } else if (lang === "ja" && keys) {
@@ -25,35 +37,27 @@ const applyStrings = (lang: any) => {
   });
 };
 
-const findLocalMatch = async () => {
-  let chosenLanguage = navigator.language.substring(0, 2);
-
-  if (chosenLanguage === "en") {
-    englishScript = await fetch("./src/text/english.json")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        return data;
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    chosenLanguage = "en";
-  } else if (chosenLanguage === "ja") {
-    japaneseScript = await fetch("./src/text/japanese.json")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        return data;
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    chosenLanguage = "ja";
-  }
-  return chosenLanguage;
+const loadLanguages = async () => {
+  englishScript = await fetch("./src/text/english.json")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  japaneseScript = await fetch("./src/text/japanese.json")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };
 
 const primaryNav = document.querySelector(".primary-navigation");
