@@ -46,10 +46,22 @@
                 >Services</a
               >
             </li>
-            <li><a class="nav-a" href="#testimonials">Testimonials</a></li>
-            <li><a class="nav-a" href="#contact">Contact</a></li>
+            <li>
+              <a class="nav-a" href="#testimonials" data-key="nav-testimonials"
+                >Testimonials</a
+              >
+            </li>
+            <li>
+              <a class="nav-a" href="#contact" data-key="nav-contact"
+                >Contact</a
+              >
+            </li>
             <div class="button-box nav-book-button-container">
-              <button class="button nav-book-button" data-visible="false">
+              <button
+                class="button nav-book-button"
+                data-visible="false"
+                data-key="button-book"
+              >
                 Start Booking
               </button>
             </div>
@@ -65,18 +77,30 @@
       <section class="diagonal-container top-container">
         <div class="container reverse-diagonal-container showcase-container">
           <div class="showcase-message-container">
-            <h4>We Help You</h4>
-            <h2 class="showcase-grid-left">Redefine</h2>
-            <h1 class="showcase-grid-center">Your</h1>
-            <h2 class="showcase-grid-right">Beauty</h2>
+            <h4 data-key="showcase-block1">We Help You</h4>
+            <h2 class="showcase-grid-left" data-key="showcase-block2">
+              Redefine
+            </h2>
+            <h1 class="showcase-grid-center" data-key="showcase-block3">
+              Your
+            </h1>
+            <h2 class="showcase-grid-right" data-key="showcase-block4">
+              Beauty
+            </h2>
             <div class="showcase-button-container">
               <div class="secondary-button-box button-box-reverse">
-                <button class="button button-dark button-reverse">
+                <button
+                  class="button button-dark button-reverse"
+                  data-key="button-book"
+                >
                   Start Booking
                 </button>
               </div>
               <div class="button-box secondary-button-box button-box-reverse">
-                <button class="button secondary-button button-reverse">
+                <button
+                  class="button secondary-button button-reverse"
+                  data-key="button-explore"
+                >
                   Explore
                 </button>
               </div>
@@ -92,7 +116,9 @@
           <div class="contact-container">
             <div>
               <img src="src/images//icons/location.svg" alt="location" />
-              <p>8842 West Virtue Ave, Los Angelos California</p>
+              <p data-key="contactInfo-address">
+                8842 West Virtue Ave, Los Angelos California
+              </p>
             </div>
             <div>
               <img src="src/images/icons/phone.svg" alt="phone number" />
@@ -107,7 +133,7 @@
       </section>
       <section id="aboutme" class="diagonal-container white-container">
         <div class="container reverse-diagonal-container about-me-container">
-          <h4 class="section-header">About Me</h4>
+          <h4 class="section-header" data-key="headings-about">About Me</h4>
           <div class="about-me-carousel-container">
             <div class="about-me-carousel">
               <img
@@ -128,8 +154,8 @@
             </div>
           </div>
           <div class="about-me-text-container">
-            <h5>I'm Rimi, an Amazing Hair Stylist</h5>
-            <p>
+            <h5 data-key="aboutMe-header">I'm Rimi, an Amazing Hair Stylist</h5>
+            <p data-key="aboutMe-body">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -145,7 +171,7 @@
       </section>
       <section id="services" class="diagonal-container">
         <div class="container reverse-diagonal-container services-container">
-          <h4 class="section-header">Services</h4>
+          <h4 class="section-header" data-key="headings-services">Services</h4>
           <div class="service-block-container">
             <div class="service-block">
               <div class="picture-overlay-div">
@@ -154,15 +180,15 @@
                   alt="color and highlight"
                 />
                 <div>
-                  <p>
+                  <p data-key="services-firstDesc">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua.
                   </p>
-                  <h5>$60 - 2hr service</h5>
+                  <h5 data-key="services-firstDetail">$60 - 2hr service</h5>
                 </div>
               </div>
-              <h4>Color and Highlight</h4>
+              <h4 data-key="services-firstHeading">Color and Highlight</h4>
             </div>
             <div class="service-block">
               <div class="picture-overlay-div">
@@ -171,15 +197,15 @@
                   alt="kimono arrangement"
                 />
                 <div>
-                  <p>
+                  <p data-key="services-secondDesc">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua.
                   </p>
-                  <h5>$100 - 4hr service</h5>
+                  <h5 data-key="services-secondDetail">$100 - 4hr service</h5>
                 </div>
               </div>
-              <h4>Kimono Arrangement</h4>
+              <h4 data-key="services-secondHeading">Kimono Arrangement</h4>
             </div>
             <div class="service-block">
               <div class="picture-overlay-div">
@@ -188,21 +214,24 @@
                   alt="cut and style"
                 />
                 <div>
-                  <p>
+                  <p data-key="services-thirdDesc">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua.
                   </p>
-                  <h5>$50 - 1.5hr service</h5>
+                  <h5 data-key="services-thirdDetail">$50 - 1.5hr service</h5>
                 </div>
               </div>
-              <h4>Cut and Style</h4>
+              <h4 data-key="services-thirdHeading">Cut and Style</h4>
             </div>
           </div>
           <div
             class="secondary-button-box service-button-block service-button-box"
           >
-            <button class="button button-dark service-button">
+            <button
+              class="button button-dark service-button"
+              data-key="button-book"
+            >
               Start Booking
             </button>
           </div>
@@ -210,15 +239,17 @@
       </section>
       <section id="testimonials" class="diagonal-container white-container">
         <div class="container reverse-diagonal-container testimonial-container">
-          <h4 class="section-header">What My Customers Love</h4>
+          <h4 class="section-header" data-key="headings-testimonials">
+            What My Customers Love
+          </h4>
           <div class="testimonial-spinner-container">
             <div class="testimonial-block previous">
               <img
                 src="src/images/photos/joe-gardner-N5GCRjEMboQ-unsplash.jpg"
                 alt="lauren testimonial"
               />
-              <h5>Lauren</h5>
-              <p>
+              <h5 data-key="testimonials-firstName">Lauren</h5>
+              <p data-key="testimonials-firstTest">
                 Always an amazing job by Rimi. I come back every two weeks to
                 keep my hair looking amazing!
               </p>
@@ -228,8 +259,8 @@
                 src="src/images/photos/alex-shaw-lQ6P2dzTfj8-unsplash.jpg"
                 alt="marin testimonial"
               />
-              <h5>Marin</h5>
-              <p>
+              <h5 data-key="testimonials-secondName">Marin</h5>
+              <p data-key="testimonials-secondTest">
                 Rimi made me look amazing for my University graduation. Can't
                 recommend her enough!
               </p>
@@ -239,16 +270,18 @@
                 src="src/images/photos/justin-chen-J7Cf1Gch49E-unsplash.jpg"
                 alt="alex testimonial"
               />
-              <h5>Alex</h5>
-              <p>Never thought I could look this good!</p>
+              <h5 data-key="testimonials-thirdName">Alex</h5>
+              <p data-key="testimonials-thirdTest">
+                Never thought I could look this good!
+              </p>
             </div>
             <div class="testimonial-block hidden-1">
               <img
                 src="src/images/photos/joe-gardner-N5GCRjEMboQ-unsplash.jpg"
                 alt="lauren testimonial"
               />
-              <h5>Lauren</h5>
-              <p>
+              <h5 data-key="testimonials-fourthName">Lauren</h5>
+              <p data-key="testimonials-fourthTest">
                 Always an amazing job by Rimi. I come back every two weeks to
                 keep my hair looking amazing!
               </p>
@@ -258,8 +291,8 @@
                 src="src/images/photos/alex-shaw-lQ6P2dzTfj8-unsplash.jpg"
                 alt="marin testimonial"
               />
-              <h5>Marin</h5>
-              <p>
+              <h5 data-key="testimonials-fifthName">Marin</h5>
+              <p data-key="testimonials-fifthTest">
                 Rimi made me look amazing for my University graduation. Can’t
                 recommend her enough!
               </p>
@@ -269,22 +302,27 @@
                 src="src/images/photos/justin-chen-J7Cf1Gch49E-unsplash.jpg"
                 alt="alex testimonial"
               />
-              <h5>Alex</h5>
-              <p>Never thought I could look this good!</p>
+              <h5 data-key="testimonials-sixthName">Alex</h5>
+              <p data-key="testimonials-sixthTest">
+                Never thought I could look this good!
+              </p>
             </div>
           </div>
         </div>
       </section>
       <section id="contact" class="diagonal-container">
         <div class="reverse-diagonal-container contact-section-container">
-          <h4 class="section-header">Contact</h4>
+          <h4 class="section-header" data-key="headings-contact">Contact</h4>
           <div class="contact-left">
             <div class="secondary-button-box button-box-large">
-              <button class="button button-dark button-large">
+              <button
+                class="button button-dark button-large"
+                data-key="button-book"
+              >
                 Start Booking
               </button>
             </div>
-            <h4>For any Questions:</h4>
+            <h4 data-key="contact-heading">For any Questions:</h4>
             <div class="contact-container">
               <div>
                 <img src="src/images/icons/phone.svg" alt="phone number" />
@@ -296,7 +334,9 @@
               </div>
               <div>
                 <img src="src/images//icons/location.svg" alt="location" />
-                <p>8842 West Virtue Ave, Los Angelos California</p>
+                <p data-key="contactInfo-address">
+                  8842 West Virtue Ave, Los Angelos California
+                </p>
               </div>
             </div>
           </div>
@@ -315,10 +355,12 @@
     <footer class="white-container footer-container">
       <div class="footer-nav-container">
         <ul role="list" class="footer-nav-ul">
-          <li><a href="#aboutme">About Me</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#aboutme" data-key="nav-about">About Me</a></li>
+          <li><a href="#services" data-key="nav-services">Services</a></li>
+          <li>
+            <a href="#testimonials" data-key="nav-testimonials">Testimonials</a>
+          </li>
+          <li><a href="#contact" data-key="nav-contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer-demo">

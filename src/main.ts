@@ -1,10 +1,13 @@
 let englishScript: any;
 let japaneseScript: any;
-let langauge = "en";
+let defaultLangauge = "en";
 let languageChoices = ["en", "jp"];
 
 document.addEventListener("DOMContentLoaded", async () => {
   let lang = await findLocalMatch();
+  if (lang === defaultLangauge) {
+    return;
+  }
   applyStrings(lang);
 });
 
@@ -15,14 +18,10 @@ const applyStrings = (lang: any) => {
     let keys = key?.split("-");
 
     if (lang === "en" && keys) {
-      console.log(englishScript[keys[0]][keys[1]]);
       container.textContent = englishScript[keys[0]][keys[1]];
     } else if (lang === "ja" && keys) {
-      console.log(japaneseScript[keys[0]][keys[1]]);
       container.textContent = japaneseScript[keys[0]][keys[1]];
     }
-    // let string = englishScript[keys[0]][keys[1]];
-    // console.log(string);
   });
 };
 
