@@ -21,6 +21,3 @@ rem:
 @media (min-width: 40em) {
 
 }
-
-- Issue with setting/getting local storage
-- Issue reading from local storage on page refresh 
