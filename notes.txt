@@ -22,8 +22,5 @@ rem:
 
 }
 
-- set (default) language 
-- fetch JSON files for later
-- before page load, detect if there's a default language in browser, if not => default, if so and they match what we have => change, if no default => default `
-
-- When 
+- Issue with setting/getting local storage
+- Issue reading from local storage on page refresh 

@@ -3,25 +3,28 @@ let japaneseScript: any;
 let defaultLangauge = "en";
 let currentLanguage = "en";
 
-document.querySelector(".language")?.addEventListener("click", () => {
-  if (currentLanguage === "en") {
-    currentLanguage = "ja";
-    applyStrings("ja");
-  } else {
-    currentLanguage = "en";
-    applyStrings("en");
-  }
-});
-
 document.addEventListener("DOMContentLoaded", async () => {
   await loadLanguages();
   let browserLang = navigator.language.substring(0, 2);
-  let storedLang = localStorage.getItem("langauge");
-  if (browserLang === defaultLangauge) {
+  let storedLang = localStorage.getItem("language");
+  if (!!storedLang) {
+    if (storedLang === defaultLangauge) {
+      return;
+    } else {
+      applyStrings(storedLang);
+      currentLanguage = storedLang;
+    }
+  } else if (!!browserLang) {
+    if (browserLang === defaultLangauge) {
+      return;
+    } else {
+      applyStrings(browserLang);
+      currentLanguage = browserLang;
+      saveLanguage(browserLang);
+    }
+  } else {
     return;
   }
-  applyStrings(browserLang);
-  currentLanguage = browserLang;
 });
 
 const applyStrings = (lang: any) => {
@@ -35,6 +38,10 @@ const applyStrings = (lang: any) => {
       container.textContent = japaneseScript[keys[0]][keys[1]];
     }
   });
+};
+
+const saveLanguage = (language: string) => {
+  localStorage.setItem("language", language);
 };
 
 const loadLanguages = async () => {
@@ -59,6 +66,18 @@ const loadLanguages = async () => {
       console.log(err);
     });
 };
+
+document.querySelector(".language")?.addEventListener("click", () => {
+  if (currentLanguage === "en") {
+    currentLanguage = "ja";
+    applyStrings("ja");
+    saveLanguage("ja");
+  } else {
+    currentLanguage = "en";
+    applyStrings("en");
+    saveLanguage("en");
+  }
+});
 
 const primaryNav = document.querySelector(".primary-navigation");
 const navToggle = document.querySelector(".mobile-nav-toggle");
