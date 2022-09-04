@@ -657,6 +657,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.iframe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: 3px solid $purple2;
   transform: translate(16px, 16px);
   aspect-ratio: 1/1;
@@ -796,6 +802,31 @@ body {
   &:hover {
     background-color: $purple3;
     color: $white;
+  }
+}
+
+.send-button {
+  width: 10rem;
+}
+
+.button-confirm {
+  transition: 0.25s;
+  background-color: $purple4;
+  color: black;
+}
+
+.contact-form-container {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  div {
+    display: flex;
+    flex-direction: column;
+    &:last-child {
+      align-self: flex-end;
+    }
   }
 }
 

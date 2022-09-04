@@ -643,6 +643,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.iframe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: 3px solid #681d94;
   transform: translate(16px, 16px);
   aspect-ratio: 1/1;
@@ -777,6 +783,31 @@ body {
 .button-dark:hover {
   background-color: #a26bb8;
   color: #fcfcfc;
+}
+
+.send-button {
+  width: 10rem;
+}
+
+.button-confirm {
+  transition: 0.25s;
+  background-color: #dcb8db;
+  color: black;
+}
+
+.contact-form-container {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.contact-form-container div {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form-container div:last-child {
+  align-self: flex-end;
 }
 
 @media only screen and (min-width: 26.5rem) {

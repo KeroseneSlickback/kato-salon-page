@@ -218,4 +218,13 @@ const runTestTestimonialCycle = () => {
 
 runTestTestimonialCycle();
 
+const sendButton = document.querySelector(".send-button");
+
+sendButton?.addEventListener("click", () => {
+  sendButton.classList.add("button-confirm");
+  setTimeout(() => {
+    sendButton.innerHTML = "Sent!";
+  }, 350);
+});
+
 export {};
