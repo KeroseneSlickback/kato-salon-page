@@ -54,6 +54,9 @@
     "sixthTest": "Never thought I could look this good!"
   },
   "contact": {
-    "heading": "For any Questions"
+    "heading": "For any Questions",
+    "subject": "Subject",
+    "message": "Message",
+    "sendButton": "Send Message"
   }
 }

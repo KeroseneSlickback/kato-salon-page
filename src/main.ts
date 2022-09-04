@@ -223,7 +223,11 @@ const sendButton = document.querySelector(".send-button");
 sendButton?.addEventListener("click", () => {
   sendButton.classList.add("button-confirm");
   setTimeout(() => {
-    sendButton.innerHTML = "Sent!";
+    if (currentLanguage === "en") {
+      sendButton.innerHTML = "Sent!";
+    } else {
+      sendButton.innerHTML = "送りました";
+    }
   }, 350);
 });
 

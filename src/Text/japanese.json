@@ -54,6 +54,9 @@
     "sixthTest": "こんなに格好いいとは思わなかった！"
   },
   "contact": {
-    "heading": "お問い合わせについて"
+    "heading": "お問い合わせについて",
+    "subject": "Blah",
+    "message": "Meh",
+    "sendButton": "送る"
   }
 }
