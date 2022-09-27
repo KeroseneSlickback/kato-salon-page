@@ -3,6 +3,29 @@ let japaneseScript: any;
 let defaultLangauge = "en";
 let currentLanguage = "en";
 
+const loadLanguages = async () => {
+  englishScript = await fetch("./data/english.json")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  japaneseScript = await fetch("./data/japanese.json")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
 document.addEventListener("DOMContentLoaded", async () => {
   await loadLanguages();
   let browserLang = navigator.language.substring(0, 2);
@@ -42,29 +65,6 @@ const applyStrings = (lang: any) => {
 
 const saveLanguage = (language: string) => {
   localStorage.setItem("language", language);
-};
-
-const loadLanguages = async () => {
-  englishScript = await fetch("./src/text/english.json")
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      return data;
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-  japaneseScript = await fetch("./src/text/japanese.json")
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      return data;
-    })
-    .catch((err) => {
-      console.log(err);
-    });
 };
 
 document.querySelector(".language")?.addEventListener("click", () => {
