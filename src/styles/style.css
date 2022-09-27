@@ -590,8 +590,6 @@ body {
   align-items: center;
   width: 100vw;
   height: 420px;
-  padding: 0 0 1rem 0;
-  touch-action: none;
 }
 
 .center {
