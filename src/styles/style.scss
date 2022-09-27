@@ -185,7 +185,7 @@ body {
   }
 
   a {
-    padding: 6px 8px;
+    transition: 0.2s;
     font-size: 1rem;
     transition: 0.15s;
     border-radius: 1px;
@@ -294,8 +294,8 @@ body {
 }
 
 .language {
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 1.75rem;
+  width: 1.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -304,7 +304,6 @@ body {
   transition: 0.2s;
   img {
     opacity: 0.5;
-    height: 1.5rem;
   }
 
   &:hover {
@@ -362,6 +361,7 @@ body {
   align-items: center;
   justify-content: space-around;
   margin-top: 0.75rem;
+  gap: 0.5rem;
 }
 
 .styled-photo {
@@ -439,38 +439,39 @@ body {
     aspect-ratio: 2/3;
     object-fit: cover;
     position: absolute;
-    transition: all 0.5s cubic-bezier(1, 0, 0.33, 1);
+    transition: all 0.5s cubic-bezier(0.5, 0.5, 0, 1);
   }
 }
 
 .carousel-top-left {
   z-index: 1;
   transform: translate(-2.125rem, -3.5rem);
-  filter: brightness(25%);
-  opacity: 75%;
+  filter: grayscale(100%) brightness(25%);
+  opacity: 85%;
 }
 
 .carousel-bottom-right {
   z-index: 1;
   transform: translate(2.125rem, 3.5rem);
-  filter: brightness(25%);
-  opacity: 75%;
+  filter: grayscale(100%) brightness(25%);
+  opacity: 85%;
 }
 
 .carousel-center {
   z-index: 10;
   transform: translate(0px, 0px);
-  filter: brightness(100%);
+  filter: grayscale(0%) brightness(100%);
 }
 
 .about-me-text-container {
   h5 {
     font-size: 1.5rem;
     text-align: center;
-    margin: 1rem 0 0.5rem 0;
+    margin: 1rem 0;
   }
   p {
     font-size: 0.9rem;
+    line-height: 1.75;
   }
 }
 
@@ -569,6 +570,7 @@ body {
   z-index: 1;
   width: 250px;
   height: 400px;
+  transition: 0.2s;
   img {
     height: 250px;
   }
@@ -609,7 +611,7 @@ body {
 .center {
   z-index: 10;
   transform: translate(0px, 0px);
-  filter: brightness(100%);
+  filter: brightness(100%) grayscale(0%) contrast(1);
 }
 
 .center,
@@ -628,10 +630,12 @@ body {
 }
 
 .previous {
+  filter: grayscale(50%) contrast(0.8);
   transform: translateX(-16rem) scale(0.8);
 }
 
 .next {
+  filter: grayscale(50%) contrast(0.8);
   transform: translateX(16rem) scale(0.8);
 }
 
@@ -733,7 +737,8 @@ body {
   background-color: $yellow1;
   border: none;
   font-size: 1.125rem;
-  padding: 0.5rem 0.625rem;
+  padding: 0.5rem 0.5rem;
+  min-width: 8rem;
   transition: 0.08s;
   transform: translate(-4px, -4px);
 
@@ -920,7 +925,11 @@ $laptop: 64rem;
     position: relative;
     flex-direction: row;
     padding: 0rem;
-    gap: 0rem;
+    gap: 0.25rem;
+    a {
+      font-size: 0.9125rem;
+      padding: 0.25rem 0.5rem;
+    }
   }
   .showcase-message-container {
     h4 {
@@ -944,6 +953,16 @@ $laptop: 64rem;
     grid-template-rows: 0fr 1fr;
     max-width: calc(100vw - 1rem);
     column-gap: 2rem;
+  }
+  .about-me-text-container {
+    max-width: 30rem;
+    h5 {
+      font-size: 1.6125rem;
+      padding-bottom: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
   }
   .section-header {
     grid-column: span 2;
@@ -990,13 +1009,16 @@ $laptop: 64rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0fr 1fr;
     align-items: center;
-    column-gap: 2rem;
+    column-gap: 0rem;
   }
 }
 
 @media only screen and (min-width: $tabletL) {
   .primary-navigation {
-    gap: 0.625rem;
+    gap: 0.75rem;
+    a {
+      padding: 0.5rem 0.75rem;
+    }
   }
   .picture-container-dark {
     img {

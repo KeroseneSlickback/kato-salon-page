@@ -173,7 +173,7 @@ body {
   margin: 0.625rem 0;
 }
 .primary-navigation a {
-  padding: 6px 8px;
+  transition: 0.2s;
   font-size: 1rem;
   transition: 0.15s;
   border-radius: 1px;
@@ -280,8 +280,8 @@ body {
 }
 
 .language {
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 1.75rem;
+  width: 1.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -291,7 +291,6 @@ body {
 }
 .language img {
   opacity: 0.5;
-  height: 1.5rem;
 }
 .language:hover {
   background-color: #fee977;
@@ -346,6 +345,7 @@ body {
   align-items: center;
   justify-content: space-around;
   margin-top: 0.75rem;
+  gap: 0.5rem;
 }
 
 .styled-photo {
@@ -430,36 +430,37 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
-  transition: all 0.5s cubic-bezier(1, 0, 0.33, 1);
+  transition: all 0.5s cubic-bezier(0.5, 0.5, 0, 1);
 }
 
 .carousel-top-left {
   z-index: 1;
   transform: translate(-2.125rem, -3.5rem);
-  filter: brightness(25%);
-  opacity: 75%;
+  filter: grayscale(100%) brightness(25%);
+  opacity: 85%;
 }
 
 .carousel-bottom-right {
   z-index: 1;
   transform: translate(2.125rem, 3.5rem);
-  filter: brightness(25%);
-  opacity: 75%;
+  filter: grayscale(100%) brightness(25%);
+  opacity: 85%;
 }
 
 .carousel-center {
   z-index: 10;
   transform: translate(0px, 0px);
-  filter: brightness(100%);
+  filter: grayscale(0%) brightness(100%);
 }
 
 .about-me-text-container h5 {
   font-size: 1.5rem;
   text-align: center;
-  margin: 1rem 0 0.5rem 0;
+  margin: 1rem 0;
 }
 .about-me-text-container p {
   font-size: 0.9rem;
+  line-height: 1.75;
 }
 
 .services-container {
@@ -555,6 +556,7 @@ body {
   z-index: 1;
   width: 250px;
   height: 400px;
+  transition: 0.2s;
 }
 .testimonial-block img {
   height: 250px;
@@ -595,7 +597,7 @@ body {
 .center {
   z-index: 10;
   transform: translate(0px, 0px);
-  filter: brightness(100%);
+  filter: brightness(100%) grayscale(0%) contrast(1);
 }
 
 .center,
@@ -614,10 +616,12 @@ body {
 }
 
 .previous {
+  filter: grayscale(50%) contrast(0.8);
   transform: translateX(-16rem) scale(0.8);
 }
 
 .next {
+  filter: grayscale(50%) contrast(0.8);
   transform: translateX(16rem) scale(0.8);
 }
 
@@ -717,7 +721,8 @@ body {
   background-color: #ffd300;
   border: none;
   font-size: 1.125rem;
-  padding: 0.5rem 0.625rem;
+  padding: 0.5rem 0.5rem;
+  min-width: 8rem;
   transition: 0.08s;
   transform: translate(-4px, -4px);
 }
@@ -876,7 +881,11 @@ body {
     position: relative;
     flex-direction: row;
     padding: 0rem;
-    gap: 0rem;
+    gap: 0.25rem;
+  }
+  .primary-navigation a {
+    font-size: 0.9125rem;
+    padding: 0.25rem 0.5rem;
   }
   .showcase-message-container h4 {
     font-size: 1.5rem;
@@ -897,6 +906,16 @@ body {
     max-width: calc(100vw - 1rem);
     -moz-column-gap: 2rem;
          column-gap: 2rem;
+  }
+  .about-me-text-container {
+    max-width: 30rem;
+  }
+  .about-me-text-container h5 {
+    font-size: 1.6125rem;
+    padding-bottom: 1.5rem;
+  }
+  .about-me-text-container p {
+    font-size: 1rem;
   }
   .section-header {
     grid-column: span 2;
@@ -937,13 +956,16 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0fr 1fr;
     align-items: center;
-    -moz-column-gap: 2rem;
-         column-gap: 2rem;
+    -moz-column-gap: 0rem;
+         column-gap: 0rem;
   }
 }
 @media only screen and (min-width: 53.125rem) {
   .primary-navigation {
-    gap: 0.625rem;
+    gap: 0.75rem;
+  }
+  .primary-navigation a {
+    padding: 0.5rem 0.75rem;
   }
   .picture-container-dark img {
     max-width: 22rem;

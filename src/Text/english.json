@@ -25,33 +25,33 @@
     "address": "8842 West Virtue Ave, Los Angelos California"
   },
   "aboutMe": {
-    "header": "I'm Rimi, an Amazing Hair Stylist",
-    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laborisnisi ut aliquip ex ea commodo consequat. Duis aute irure dolor inreprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "header": "I'm Rimi, a hair stylist",
+    "body": "I have been in this business for over 10 years now. I first trained for about 5 years out of the prefecture and then worked in New York City for a few months. I try to give treatments that bring out the best of a person's charm no matter what environment they are in. I have also participated in various contests and concentrated on creative designs as well as normal hairstyles. My parents and grandparents were both hair stylists, so I grew up in a family of hair stylists. I am more than happy to help as many people as possible enjoy hairstyles."
   },
   "services": {
-    "firstDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "firstDetail": "$60 - 2hr service",
+    "firstDesc": "Long lasting color that lasts weeks upon weeks and finely applied highlights.",
+    "firstDetail": "$60 - 2hr",
     "firstHeading": "Color and Highlight",
-    "secondDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "secondDetail": "$100 - 4hr service",
+    "secondDesc": "Kimono arrangement specifically tailored to bring out the best in one's charm.",
+    "secondDetail": "$100 - 4hr",
     "secondHeading": "Kimono Arrangement",
-    "thirdDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "thirdDetail": "$50 - 1.5hr service",
+    "thirdDesc": "We pride ourselves on quality hair styles and cuts that are unique to each person's style.",
+    "thirdDetail": "$50 - 1.5hr",
     "thirdHeading": "Cut and Style"
   },
   "testimonials": {
-    "firstName": "Lauren",
-    "firstTest": "Always an amazing job by Rimi. I come back every two weeks to keep my hair looking amazing!",
-    "secondName": "Marin",
+    "firstName": "Mei",
+    "firstTest": "Always an amazing job by Rimi. I come back every two months to keep my hair looking amazing!",
+    "secondName": "Tsumugu",
     "secondTest": "Rimi made me look amazing for my University graduation. Can't recommend her enough!",
-    "thirdName": "Alex",
+    "thirdName": "Akito",
     "thirdTest": "Never thought I could look this good!",
-    "fourthName": "Lauren",
-    "fourthTest": "Always an amazing job by Rimi. I come back every two weeks to keep my hair looking amazing!",
-    "fifthName": "Marin",
-    "fifthTest": "Rimi made me look amazing for my University graduation. Can't recommend her enough!",
-    "sixthName": "Alex",
-    "sixthTest": "Never thought I could look this good!"
+    "fourthName": "Sakura",
+    "fourthTest": "I finally found a place I love going to!",
+    "fifthName": "Misato",
+    "fifthTest": "Rimi talks to me in a friendly manner and always makes the time fly by during my treatment!",
+    "sixthName": "Kanako",
+    "sixthTest": "I really trust Rimi because she is very kind to me and teach me how to take care of my hair afterwards."
   },
   "contact": {
     "heading": "For any Questions",

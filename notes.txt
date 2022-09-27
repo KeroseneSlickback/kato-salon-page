@@ -1,3 +1,7 @@
+2px = 0.125
+4px = 0.25rem
+6px = 0.325rem
+8px = 0.5rem
 10px = 0.625rem
 12px = 0.75rem
 14px = 0.875rem
@@ -5,6 +9,8 @@
 18px = 1.125rem
 20px = 1.25rem
 24px = 1.5rem
+26px = 1.625rem
+28px = 1.75rem
 30px = 1.875rem
 32px = 2rem
 
